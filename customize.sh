@@ -12,4 +12,6 @@ cp ./move-to-home/update.sh ~/
 cp -R ./move-to-home/.config ~/
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak override --env=GTK_THEME=Adwaita-dark
+echo * soft nofile 1048576 >> /etc/security/limits.conf
+echo * hard nofile 1048576 >> /etc/security/limits.conf
 sudo update-grub 
